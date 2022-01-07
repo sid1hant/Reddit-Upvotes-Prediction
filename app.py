@@ -32,4 +32,4 @@ if submit_val:
 
 
     st.header("Here are the results:")
-    st.success(f"The upvotes predicted is {value} ")
+    st.success(f" {value} ")
