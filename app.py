@@ -8,16 +8,16 @@ st.set_page_config(page_title="Reddit Up votes  Prediction App",
 
 with st.form("prediction_form"):
 
-st.header("Reddit Upvote Prediction:")
+    st.header("Reddit Upvote Prediction:")
 
-col1,col2 = st.beta_columns(2)
-with col2:
-    text1= st.text_input('Reddit post link')
+    col1,col2 = st.beta_columns(2)
+    with col2:
+        text1= st.text_input('Reddit post link')
 
-    st.write('the link:')
-    st.write(text1)
-    
-    submit_val = st.form_submit_button("Predict Upvotes")
+        st.write('the link:')
+        st.write(text1)
+        
+        submit_val = st.form_submit_button("Predict Upvotes")
 
 if submit_val:
     # If submit is pressed == True
