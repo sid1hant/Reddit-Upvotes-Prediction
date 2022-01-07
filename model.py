@@ -8,6 +8,7 @@ from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS
 from textblob import TextBlob
 import re
 from sklearn.preprocessing import OneHotEncoder
+from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
 def Subjectivity(text):
     return TextBlob(text).sentiment.subjectivity
