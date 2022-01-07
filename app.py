@@ -8,11 +8,11 @@ st.set_page_config(page_title="Reddit Up votes  Prediction App",
 
 with st.form("prediction_form"):
 
-    st.header("Enter the URL of Reddit post:")
+    st.header("Reddit Upvote Prediction:")
 
     col1,col2 = st.beta_columns(2)
     with col2:
-        text1= st.text_input('URL link to scrape')
+        text1= st.text_input('Reddit post link')
 
         st.write('the link:')
         st.write(text1)
