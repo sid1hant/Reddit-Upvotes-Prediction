@@ -11,4 +11,3 @@ praw
 textblob
 vaderSentiment
 xgboost
-json
