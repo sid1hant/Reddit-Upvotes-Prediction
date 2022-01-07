@@ -9,6 +9,7 @@ from textblob import TextBlob
 import re
 from sklearn.preprocessing import OneHotEncoder
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
+import json
 
 def Subjectivity(text):
     return TextBlob(text).sentiment.subjectivity
