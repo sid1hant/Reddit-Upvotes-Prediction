@@ -10,3 +10,4 @@ pickle-mixin
 praw
 textblob
 vaderSentiment
+xgboost
