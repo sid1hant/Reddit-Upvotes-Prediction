@@ -1,4 +1,4 @@
 # Link of delpoyed app
 ``` bash
-https://sidseolbikeprediction.herokuapp.com/
+https://reddit-upvotes-pred.herokuapp.com/
 ```
