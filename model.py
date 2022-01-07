@@ -61,8 +61,8 @@ with open('senti.pkl', "rb") as u:
 with open('encoding.pkl', "rb") as f:
     enc = pickle.load(f)
 
-with open('model1.pkl', "rb") as a:
-    model = pickle.load(a)
+with open('model.json', "rb") as a:
+    model = json.load(a)
 
 
 
