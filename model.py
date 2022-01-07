@@ -10,9 +10,8 @@ import re
 from sklearn.preprocessing import OneHotEncoder
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 import json
-import sys
-reload(sys)
-sys.setdefaultencoding('utf-8')
+import xgboost as xgb
+from xgboost import XGBRegressor
 
 def Subjectivity(text):
     return TextBlob(text).sentiment.subjectivity
@@ -65,8 +64,8 @@ with open('senti.pkl', "rb") as u:
 with open('encoding.pkl', "rb") as f:
     enc = pickle.load(f)
 
-with open('model.json', "rb") as a:
-    model1 = json.load(a)
+model_xgb_2 = xgb.Booster()
+model_xgb_2.load_model("model.json")
 
 
 
@@ -126,7 +125,7 @@ def post_new(x):
         continue
     cols.append(column)
   X.columns = cols
-  score = model1.predict(X)
+  score = model_xgb_2.predict(X)
   output=round(score[0],2)
   return ("Predicted Score is: {}".format(output))
 
