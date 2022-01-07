@@ -10,6 +10,9 @@ import re
 from sklearn.preprocessing import OneHotEncoder
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 import json
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
 
 def Subjectivity(text):
     return TextBlob(text).sentiment.subjectivity
