@@ -62,7 +62,7 @@ with open('encoding.pkl', "rb") as f:
     enc = pickle.load(f)
 
 with open('model.json', "rb") as a:
-    model = json.load(a)
+    model1 = json.load(a)
 
 
 
@@ -122,7 +122,7 @@ def post_new(x):
         continue
     cols.append(column)
   X.columns = cols
-  score = model.predict(X)
+  score = model1.predict(X)
   output=round(score[0],2)
   return ("Predicted Score is: {}".format(output))
 
