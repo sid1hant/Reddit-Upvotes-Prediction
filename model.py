@@ -64,8 +64,11 @@ with open('senti.pkl', "rb") as u:
 with open('encoding.pkl', "rb") as f:
     enc = pickle.load(f)
 
-model_xgb_2 = xgb.Booster()
-model_xgb_2.load_model("model.json")
+# model_xgb_2 = xgb.Booster()
+# model_xgb_2.load_model("model.json")
+
+with open('model_dec.pkl', "rb") as a:
+    model12 = pickle.load(a)
 
 
 
@@ -125,7 +128,7 @@ def post_new(x):
         continue
     cols.append(column)
   X.columns = cols
-  score = model_xgb_2.predict(X)
+  score = model12.predict(X)
   output=round(score[0],2)
   return ("Predicted Score is: {}".format(output))
 
