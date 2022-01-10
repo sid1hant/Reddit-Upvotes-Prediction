@@ -64,11 +64,11 @@ with open('senti.pkl', "rb") as u:
 with open('encoding.pkl', "rb") as f:
     enc = pickle.load(f)
 
-# model_xgb_2 = xgb.Booster()
-# model_xgb_2.load_model("model.json")
+model_xgb_2 = xgb.Booster()
+model_xgb_2.load_model("test_model.json")
 
-with open('model_dec.pkl', "rb") as a:
-    model12 = pickle.load(a)
+# with open('model_dec.pkl', "rb") as a:
+#     model12 = pickle.load(a)
 
 
 
