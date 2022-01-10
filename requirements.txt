@@ -10,4 +10,4 @@ pickle-mixin
 praw
 textblob
 vaderSentiment
-xgboost
+xgboost==1.2.1
