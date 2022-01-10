@@ -61,8 +61,8 @@ with open('senti.pkl', "rb") as u:
 # Captures the path of current folder
 #curr_path = os.path.dirname(os.path.realpath(__file__))
 
-with open('encoding.pkl', "rb") as f:
-    enc = pickle.load(f)
+with open('encoding.pkl', "rb") as a:
+    enc = pickle.load(a)
 
 model_xgb_2 = xgb.Booster()
 model_xgb_2.load_model("test_model.bin")
