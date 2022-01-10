@@ -128,7 +128,7 @@ def post_new(x):
         continue
     cols.append(column)
   X.columns = cols
-  score = model12.predict(X)
+  score = model_xgb_2.predict(X)
   output=round(score[0],2)
   return ("Predicted Score is: {}".format(output))
 
