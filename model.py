@@ -65,7 +65,7 @@ with open('encoding.pkl', "rb") as a:
     enc = pickle.load(a)
 
 model_xgb_2 = xgb.Booster()
-model_xgb_2.load_model("test_model.bin")
+model_xgb_2.load_model("test_model2.bin")
 
 # with open('model_dec.pkl', "rb") as a:
 #     model12 = pickle.load(a)
