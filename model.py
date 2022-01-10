@@ -131,7 +131,8 @@ def post_new(x):
   dtest = xgb.DMatrix(X)
   score = model_xgb_2.predict(dtest)
   output=round(score[0],2)
-  return ("Predicted Score is: {}".format(output))
+  output_new=int(output)
+  return ("Predicted Score is: {}".format(output_new))
 
 # def predications(posts):
 #     print("Duration predicted")
